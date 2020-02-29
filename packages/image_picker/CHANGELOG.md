@@ -1,3 +1,7 @@
+## 0.6.3+5
+
+* iOS: Avoid unnecessary authorization checks.
+
 ## 0.6.3+4
 
 * Make the pedantic dev_dependency explicit.
