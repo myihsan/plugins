@@ -166,6 +166,10 @@ static const int SOURCE_GALLERY = 1;
 }
 
 - (void)checkPhotoAuthorization {
+  if (@available(iOS 11.0, *)) {
+    [self showPhotoLibrary];
+    return;
+  }
   PHAuthorizationStatus status = [PHPhotoLibrary authorizationStatus];
   switch (status) {
     case PHAuthorizationStatusNotDetermined: {
